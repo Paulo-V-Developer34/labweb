@@ -1,0 +1,19 @@
+{
+  "projectName": "tcc_novotec",
+  "projectRootPath": "C:\\xampp\\htdocs\\php_prisma\\tcc_novotec",
+  "phpEnvironment": "XAMPP",
+  "phpRootPathExe": "C:\\xampp\\php\\php.exe",
+  "phpGenerateClassPath": "src/Lib/Prisma/Classes",
+  "bsTarget": "http://localhost/php_prisma/tcc_novotec/",
+  "bsPathRewrite": {
+    "^/": "/php_prisma/tcc_novotec/"
+  },
+  "backendOnly": false,
+  "swaggerDocs": false,
+  "tailwindcss": false,
+  "websocket": false,
+  "prisma": true,
+  "docker": false,
+  "version": "1.26.11",
+  "excludeFiles": []
+}

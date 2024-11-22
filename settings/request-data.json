@@ -1,0 +1,14 @@
+{
+    "\/": {
+        "url": "\/",
+        "includedFiles": [
+            "C:\\xampp\\htdocs\\php_prisma\\tcc_novotec\\src\\app\\index.php"
+        ]
+    },
+    "loginAction.php": {
+        "url": "loginAction.php",
+        "includedFiles": [
+            "C:\\xampp\\htdocs\\php_prisma\\tcc_novotec\\src\\app\\not-found.php"
+        ]
+    }
+}
