@@ -1,7 +1,7 @@
 <?php
 function html($numeroLote) { 
     //fazer conexão com o BD
-    include_once 'conexaoBD.php'; //
+    include_once '../conexaoBD.php'; //
 
     //criando a instância --- talvez isso seja desnecessário com o PDO  
     try{

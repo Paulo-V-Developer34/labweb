@@ -41,9 +41,9 @@
 <body>
     <?php
         // Inclui o arquivo que verifica o acesso do usuario
-        require_once ('verificarAcesso.php'); 
+        require_once ('../verificarAcesso.php'); 
         // Carrega a barra de navegação na página
-        require_once ('barraNav.php');
+        require_once ('../barraNav.php');
     ?>
  
     <!-- Div que irá conter o conteúdo principal da página-->
@@ -51,7 +51,10 @@
         <h2 class="w3-text-black w3-center" style="font-weight: bold;">Experimentos Cadastrados</h2>
 
         <?php
-            if($_SESSION["tipo_usuario"] == "2"){
+            use Lib\StateManager;
+            $state = new StateManager();
+
+            if($state->getState('txtTipo') == "2"){
                 echo '<a href="#" class="w3-button w3-padding w3-text-teal w3-cell w3-left">
                         <button class="w3-button w3-round cadastrarNovoBtnExp" style="font-weight: bold;"><i class="fa fa-plus "></i> Novo</button>
                     </a>';
@@ -61,7 +64,7 @@
         <?php
 
             // Carrega o arquivo de conexão ao BD
-            require_once ('conexaoBD.php');
+            require_once ('../conexaoBD.php');
 
                 // Monta tabela de apresentaçao dos Experimentos Cadastrados
                 echo '
@@ -117,10 +120,10 @@
                         }  
                         echo '<td>'.$linha['condicaoExperimento'].'</td>';
                         echo '<td>';
-                        if($_SESSION["tipo_usuario"] == "2"){
+                        if($state->getState('txtTipo'); == "2"){
                             echo '<button type = "button" class="w3-button w3-white w3-border w3-border-default w3-tiny w3-round editarBtnExp" id="'.$linha['numeroLote'].'"><i class="fa fa-pencil" aria-hidden="true"></i></button>';
                         }
-                        if($_SESSION["tipo_usuario"] == "2" or $_SESSION["tipo_usuario"] == "1"){
+                        if($state->getState('txtTipo'); == "2" or $state->getState('txtTipo'); == "1"){
                             echo '<button type = "button" class="w3-button w3-white w3-border w3-border-default w3-tiny w3-round excluirBtnExp" id="'.$linha['numeroLote'].'"><i class="fa fa-trash-o" aria-hidden="true"></i></button>';
                         }
                                 

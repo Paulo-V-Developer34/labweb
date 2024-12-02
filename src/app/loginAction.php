@@ -1,5 +1,7 @@
 <?php
     
+    use Lib\Request;
+
     if(isset($_POST["btnEntrar"])){
 
         // inicia uma seção
@@ -32,7 +34,7 @@
                         $_SESSION['nome'] = $linha['nome'];
                         $_SESSION['tipo_usuario'] = $linha['tipo_usuario'];
                         //Direciona para a Página Inicial
-                        header ('Location: paginaInicial.php');
+                        Request::redirect('/home');
                     }else{
                         header ('Location: index.php'); // Caso a senha não corresponda carrega novamente a página de Login
                     }}

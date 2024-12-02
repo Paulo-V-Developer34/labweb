@@ -8,7 +8,7 @@ O arquivo de testes possui notas adicionais
 $numeroLote = $_GET['numeroLote'];
 
 //carregar o dompdf do composer
-require 'vendor/autoload.php'; // #01
+require '.autoload.php'; // #01
 
 //referenciar o namespace Dompdf
 use Dompdf\Dompdf;
